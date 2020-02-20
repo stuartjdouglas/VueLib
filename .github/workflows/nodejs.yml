@@ -17,9 +17,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd lib
     - run: npm install
     - run: npm run build-lib --if-present
     - run: npm test:unit
+      working-directory: lib
       env:
         CI: true
