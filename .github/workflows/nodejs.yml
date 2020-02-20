@@ -20,6 +20,6 @@ jobs:
     - run: npm install
     - run: npm run build-lib --if-present
     - run: npm test:unit
-      working-directory: lib
+      working-directory: ./lib
       env:
         CI: true
